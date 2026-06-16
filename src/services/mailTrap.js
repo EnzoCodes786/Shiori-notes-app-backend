@@ -4,11 +4,11 @@ async function sendMail(user_email,generated_otp) {
     const transporter = nodemailer.createTransport({
         
         host: "smtp.gmail.com",
-        port: 587,
+        port: 465,
         secure: false,
         auth : {
-            user : "aryan.qayum666@gmail.com",
-            pass : "heay xcku pilk klrv"
+            user : process.env.EMAIL_USER,
+            pass : process.env.EMAIL_PASS
         }
 
     })
