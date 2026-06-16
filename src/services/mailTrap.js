@@ -2,7 +2,7 @@ const { Resend } = require('resend')
 
 async function sendMail(user_email, generated_otp) {
   try {
-    const resend = new Resend('re_3e4ma7wm_CuUrHwB2Gkm7w6q5bhpWFh8L')
+    const resend = new Resend(process.env.RESEND_API_KEY)
 
     const data = await resend.emails.send({
       from: 'onboarding@resend.dev',
