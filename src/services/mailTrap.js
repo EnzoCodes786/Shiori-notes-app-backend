@@ -5,7 +5,7 @@ async function sendMail(user_email,generated_otp) {
         service : "gmail",
         auth : {
             user : process.env.EMAIL_USER,
-            pass : process.env.USER_
+            pass : process.env.EMAIL_PASS
         }
 
     })
