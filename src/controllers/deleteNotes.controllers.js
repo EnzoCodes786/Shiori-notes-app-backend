@@ -6,7 +6,7 @@ async function deleteNotes(req,res) {
     const data = await pool.query(`
         DELETE FROM notes_data 
         WHERE id = (?)
-        AND user_id=();
+        AND user_id=(?);
         `,[id,user_id]);
     res.json({
         message:"Noted deleted succesfully",
