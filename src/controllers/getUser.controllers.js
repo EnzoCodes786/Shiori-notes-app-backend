@@ -9,7 +9,7 @@ async function getUserInfo(req,res) {
     
     res.json({
         message :"User fetched",
-        info : data
+        info : data[0][0]
     });
 }
 
