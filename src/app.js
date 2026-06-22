@@ -14,6 +14,7 @@ const resetPasswordRoute = require('../src/routes/resetPassword.routes')
 const deleteNotesRoute = require('../src/routes/deleteNotes.routes')
 const summarizeNotesRoute = require('../src/routes/summarizeNotes.routes')
 const editNotesRoute = require('../src/routes/editNotes.routes')
+const getUserRoute = require('../src/routes/getUser.routes')
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
@@ -34,4 +35,5 @@ app.use('/auth',resetPasswordRoute);
 app.use('/notes',deleteNotesRoute);
 app.use('/notes',summarizeNotesRoute);
 app.use('/notes',editNotesRoute);
+app.use('/auth',getUserRoute)
 module.exports = app;
